@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>LightBot Clone - DCC202</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>LightBot Clone</h1>
+        <p>Desenvolvido por: <strong>Victor Loureiro</strong> | Contato: victor.loureiro.silva</p>
+    </header>
+    <main>
+        <div id="game-container">
+            <div id="grid"></div>
+        </div>
+            <div id="controls">
+            <div class="command-buttons">
+                <button onclick="addCmd('F')">Avançar</button>
+                <button onclick="addCmd('L')">Esquerda</button>
+                <button onclick="addCmd('R')">Direita</button>
+                <button onclick="addCmd('J')">Pular</button>
+                <button onclick="addCmd('X')">Acender</button>
+            </div>
+            
+            <div id="program-area" style="background: #333; padding: 10px; margin: 10px auto; min-height: 40px; color: white;">
+                Main: <span id="main-prog"></span>
+            </div>
+
+            <button onclick="runProgram()" style="background: green; color: white; padding: 10px;">EXECUTAR</button>
+            <button onclick="resetLevel()" style="background: red; color: white; padding: 10px;">REINICIAR</button>
+        </div>
+            </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

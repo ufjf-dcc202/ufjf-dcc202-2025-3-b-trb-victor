@@ -1,26 +1,56 @@
-
-.chao { 
-    background-image: url('img/chao.png'); 
-    background-size: cover; 
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+    background: url('fundo.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0; padding: 20px;
 }
 
-.alvo { 
-    background-image: url('img/alvo.png'); 
-    background-size: cover; 
+#game-container {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.aceso { 
-    background-image: url('img/aceso.png'); 
-    background-size: cover; 
+#grid {
+    display: grid;
+    /* Colunas serão definidas pelo JS, mas deixamos um padrão */
+    grid-template-columns: repeat(5, 60px); 
+    gap: 0;
 }
 
-.robo {
-    width: 30px;
-    height: 30px;
-    background-image: url('img/robo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent; 
-    border: none; 
+.cell {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Chão Normal */
+.cell.active {
+    background: url('chao.png') no-repeat center/cover;
+}
+
+/* Objetivo (Luz Apagada) */
+.cell.light-off {
+    background: url('alvo.png') no-repeat center/cover !important;
+}
+
+/* Objetivo Concluído (Luz Acesa) */
+.cell.light-on {
+    background: url('acesso.png') no-repeat center/cover !important;
+}
+
+/* O Robô */
+.player {
+    width: 50px;
+    height: 50px;
+    background: url('robo.png') no-repeat center/contain;
+    position: absolute;
+    top: 5px; left: 5px;
+    transition: transform 0.3s ease, top 0.3s ease, left 0.3s ease;
+    z-index: 10;
 }
