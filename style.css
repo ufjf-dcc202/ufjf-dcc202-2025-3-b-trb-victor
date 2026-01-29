@@ -1,0 +1,26 @@
+
+.chao { 
+    background-image: url('img/chao.png'); 
+    background-size: cover; 
+}
+
+.alvo { 
+    background-image: url('img/alvo.png'); 
+    background-size: cover; 
+}
+
+.aceso { 
+    background-image: url('img/aceso.png'); 
+    background-size: cover; 
+}
+
+.robo {
+    width: 30px;
+    height: 30px;
+    background-image: url('img/robo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent; 
+    border: none; 
+}
